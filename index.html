@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Simple Todo List</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<script type="text/javascript" src="script.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Simple Todo List</h1>
+	<!---<p>No GUI yet. For now, press F12 and use the JavaScript console to interact.</p>-->
+	<div class = "enterForm">
+	<form id = "form1">
+		<input type="text" name="addI" placeholder="Item" />
+		<input type="text" name="addC" placeholder="Category" />
+		<input type="button" value="Add Item" onclick="todoList.addItem(this.form.addI.value,this.form.addC.value)" />
+		<br><br>
+
+		<input type="text" name="old" placeholder="Old Item" />
+		<input type="text" name="new" placeholder="New Item" />
+		<input type="button" value="Change Item" onclick="todoList.changeItem(this.form.old.value,this.form.new.value)" />
+		<br><br>
+
+		<input type="text" name="del" placeholder="Item" />
+		<input type="button" value="Delete Item" onclick="todoList.deleteItem(this.form.del.value)" />
+		<br><br>
+
+		<input type="text" name="setCat" placeholder="Item" />
+		<input type="text" name="Cat" placeholder="Category" />
+		<input type="button" value="Set Category" onclick="todoList.setCategory(this.form.setCat.value,this.form.Cat.value)" />
+		<br><br>
+
+		<input type="button" value="Show List" onclick="todoList.showList()" />
+		<input type="button" value="Show List By Category" onclick="todoList.showListByCategory()" />
+		<input type="button" value="Clear" onclick="todoList.clear()" />
+		<br><br><br>
+	</form>
+	</div>
+	<div id="display">
+	</div>
+</body>
+</html>
